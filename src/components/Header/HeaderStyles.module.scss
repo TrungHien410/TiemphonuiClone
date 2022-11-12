@@ -1,0 +1,62 @@
+.wrapper {
+  border-bottom: 1px solid #ccc;
+  & .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1200px;
+    height: var(--height-header);
+    padding: 20px 50px;
+    margin: auto;
+    & .modal-search {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 9999999;
+    }
+    & .btn-bar {
+      display: none;
+      width: 25px;
+      height: 25px;
+    }
+
+    & .logo {
+      max-width: 135px;
+      cursor: pointer;
+    }
+
+    & .navbar {
+      flex: auto;
+    }
+
+    & .btn-action {
+      max-width: 64px;
+    }
+  }
+}
+
+// Reponsive
+@media only screen and (max-width: 990px) {
+  & .inner {
+    & .btn-bar {
+      display: block !important;
+    }
+
+    & .navbar {
+      position: absolute;
+      width: 60%;
+      overflow: hidden;
+      height: calc(100vh - var(--height-header));
+      padding: 56px 0px;
+      top: 95px;
+      left: -80%;
+      border: 1px solid #ccc;
+      transition: 0.5s ease;
+    }
+    & .navbar.activeBtnBar {
+      left: 0%;
+    }
+  }
+}

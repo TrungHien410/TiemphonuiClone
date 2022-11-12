@@ -1,0 +1,21 @@
+.wrapper {
+  & .input-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: var(--height-header);
+    border-bottom: 1px solid #ccc;
+    background-color: aqua;
+    & .form {
+      width: 40%;
+      & input {
+        border-radius: 0px !important;
+      }
+    }
+  }
+  & .outside {
+    height: 100%;
+    background-color: black;
+  }
+}

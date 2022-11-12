@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    gap: 20px;
+    & .icon-search {
+        cursor: pointer;
+        & .icon {
+            font-size: 22px;
+        }
+    }
+    & .icon-search:hover .icon {
+        font-size: 25px;
+    }
+    & .icon-bag {
+        cursor: pointer;
+        & .icon {
+            font-size: 22px;
+        }
+    }
+    & .icon-bag:hover .icon{
+        font-size: 25px;
+    }
+}
